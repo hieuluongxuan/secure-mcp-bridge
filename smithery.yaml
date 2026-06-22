@@ -1,0 +1,19 @@
+# smithery.yaml
+startCommand:
+  type: stdio
+commandFunction: |-
+  config => ({
+    command: 'python',
+    args: ['client_bridge.py'],
+    env: {
+      MCP_GATEWAY_URL: config.gatewayUrl || 'https://himitrace.himitek.com'
+    }
+  })
+configSchema:
+  type: object
+  properties:
+    gatewayUrl:
+      type: string
+      title: "MCP Gateway URL"
+      description: "The HTTPS URL of your Enterprise MCP Gateway (default: https://himitrace.himitek.com)"
+      default: "https://himitrace.himitek.com"

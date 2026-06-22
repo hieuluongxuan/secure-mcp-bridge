@@ -1,0 +1,19 @@
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python caching
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local Secrets
+.secrets/
+token.json
+audit.log
+
+# IDEs
+.vscode/
+.idea/
